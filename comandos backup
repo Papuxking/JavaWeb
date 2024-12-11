@@ -1,0 +1,24 @@
+#!/bin/bash
+FECHA_Y_HORA_ETC=`date "+%d-%m-%y_%H-%M-%S"`
+NOMBRE_ARCHIVO_ETC="respaldo_ETC_$FECHA_Y_HORA_ETC.tgz"
+CARPETA_DESTINO="RespaldosSeguridad"
+CARPETA_RESPALDO_ETC="../etc"
+#Directorio para respaldos
+mkdir -p "$CARPETA_DESTINO"
+tar cfvz "$CARPETA_DESTINO/$NOMBRE_ARCHIVO_ETC" "$CARPETA_RESPALDO_ETC"
+
+FECHA_Y_HORA_VAR=`date "+%d-%m-%y_%H-%M-%S"`
+NOMBRE_ARCHIVO_VAR="respaldo_VAR_$FECHA_Y_HORA_ETC.tgz"
+CARPETA_DESTINO="RespaldosSeguridad"
+CARPETA_RESPALDO_VAR="../var"
+#Directorio para respaldos
+mkdir -p "$CARPETA_DESTINO"
+tar cfvz "$CARPETA_DESTINO/$NOMBRE_ARCHIVO_VAR" "$CARPETA_RESPALDO_VAR"
+
+FECHA_Y_HORA_HOME=`date "+%d-%m-%y_%H-%M-%S"`
+NOMBRE_ARCHIVO_HOME="respaldo_HOME_$FECHA_Y_HORA_HOME.tgz"
+CARPETA_DESTINO="RespaldosSeguridad"
+CARPETA_RESPALDO_HOME="../home"
+#Directorio para respaldos
+mkdir -p "$CARPETA_DESTINO"
+tar cfvz "$CARPETA_DESTINO/$NOMBRE_ARCHIVO_HOME" "$CARPETA_RESPALDO_HOME"
